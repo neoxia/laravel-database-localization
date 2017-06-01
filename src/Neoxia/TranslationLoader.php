@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Lib\Neoxia\DatabaseLocalization;
+namespace Neoxia\DatabaseLocalization;
 
 use Illuminate\Translation\LoaderInterface;
-use App\Lib\Neoxia\DatabaseLocalization\Translatable;
+use Neoxia\DatabaseLocalization\Translatable;
 
 use Exception;
 

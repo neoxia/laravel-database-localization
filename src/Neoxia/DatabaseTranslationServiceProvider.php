@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Lib\Neoxia\DatabaseLocalization;
+namespace Neoxia\DatabaseLocalization;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Translation\TranslationServiceProvider;
 
-use App\Lib\Neoxia\DatabaseLocalization\TranslationLoader;
-use App\lib\Neoxia\DatabaseLocalization\Translator;
+use Neoxia\DatabaseLocalization\TranslationLoader;
+use Neoxia\DatabaseLocalization\Translator;
 
 class DatabaseTranslationServiceProvider extends ServiceProvider
 {

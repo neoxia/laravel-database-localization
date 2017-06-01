@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\Neoxia\DatabaseLocalization;
+namespace Neoxia\DatabaseLocalization;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;

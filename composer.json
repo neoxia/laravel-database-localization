@@ -3,7 +3,9 @@
     "license": "MIT",
     "description": "Change Laravel default file based localization into database based localization",
     "require": {
-        "php": ">=5.5.9"
+        "php": ">=5.5.9",
+        "illuminate/support": "5.1.*|5.2.*",
+        "illuminate/translation": "5.1.*|5.2.*",
     },
     "autoload": {
          "psr-4": {

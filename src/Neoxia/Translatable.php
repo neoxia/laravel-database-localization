@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\Neoxia\DatabaseLocalization;
+namespace Neoxia\DatabaseLocalization;
 
 interface Translatable
 {
