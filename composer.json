@@ -1,0 +1,13 @@
+{
+    "name": "neoxia/laravel-database-localization",
+    "license": "MIT",
+    "description": "Change Laravel default file based localization into database based localization",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+         "psr-4": {
+            "Neoxia\\": "src/Neoxia/"
+        }
+    }
+}
