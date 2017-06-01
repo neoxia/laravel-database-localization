@@ -26,7 +26,7 @@ class DatabaseTranslationServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/database_localization.php' => config_path('database_localization.php'),
+            __DIR__.'/../config/database_localization.php' => config_path('database_localization.php'),
         ]);
     }
 
