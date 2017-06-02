@@ -3,7 +3,6 @@
 namespace Neoxia\DatabaseLocalization;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Translation\TranslationServiceProvider;
 
 use Neoxia\DatabaseLocalization\TranslationLoader;
 use Neoxia\DatabaseLocalization\Translator;
