@@ -1,11 +1,11 @@
 {
     "name": "neoxia/laravel-database-localization",
     "license": "MIT",
-    "description": "Change Laravel default file based localization into database based localization",
+    "description": "Use a database source instead of files for localization in Laravel",
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "5.1.*|5.2.*",
-        "illuminate/translation": "5.1.*|5.2.*"
+        "illuminate/support": "5.1.*",
+        "illuminate/translation": "5.1.*"
     },
     "autoload": {
          "psr-4": {
