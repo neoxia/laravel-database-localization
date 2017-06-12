@@ -1,37 +1,34 @@
-# laravel-database-localization
+[![Latest Stable Version](http://img.shields.io/github/release/neoxia/laravel-database-localization.svg)](https://packagist.org/packages/neoxia/laravel-database-localization)
 
-Use a database source instead of files for localization in Laravel
+## Laravel Database Localization
+
+This package allows the storage of Laravel translations in a database instead of files. It is not opinionated about how you store your data (any database, any schema) or how you edit this data. It only overwrite the default translation loading by using a Laravel model that can be specified in the configuration.
 
 ## Installation
 
-### 1. Add in Composer.json
+In order to install this package, add `neoxia/laravel-csv-response` in `composer.json`.
 
-"repositories": [
-  ...,
-  {
-      "type": "vcs",
-      "url": "https://github.com/neoxia/laravel-database-localization"
-  }  
-]
-
+```JS
 "require": {
-  ...,
-  "neoxia/laravel-database-localization": "master"
+    "neoxia/laravel-database-localization": "1.0.*"
 },
+```
 
-### 2. Run a composer update
+Go to `config/app.php`, remove the original service provider
 
-### 3. Update your config/app.php
-
-Remove
+```PHP
 Illuminate\Translation\TranslationServiceProvider::class,
+```
 
-Add
-App\Lib\Neoxia\DatabaseLocalization\DatabaseTranslationServiceProvider::class,
+And replace it by this one.
 
-### 4. Configure the package
+```PHP
+Neoxia\DatabaseLocalization\DatabaseTranslationServiceProvider::class,
+```
 
-Use the artisan command
-`php artisan vendor:publish`
+## Configuration
 
-Update the configuration with you model class name. This model has to implement the Neoxia\Translatable interface.
+You can publish a default config file by runnning the artisan command
+`php artisan vendor:publish`.
+
+Update the configuration with you model class name. This model has to implement the `Neoxia\DatabaseLocalization\Translatable` interface.
