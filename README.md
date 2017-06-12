@@ -6,7 +6,7 @@ This package allows the storage of Laravel translations in a database instead of
 
 ## Installation
 
-In order to install this package, add `neoxia/laravel-csv-response` in `composer.json`.
+In order to install this package, add `neoxia/laravel-database-localization` in `composer.json`.
 
 ```JS
 "require": {
