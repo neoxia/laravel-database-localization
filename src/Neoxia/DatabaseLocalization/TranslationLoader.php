@@ -9,14 +9,14 @@ use Exception;
 
 class TranslationLoader implements LoaderInterface
 {
-	/**
+    /**
      * All of the namespace hints.
      *
      * @var array
      */
     protected $hints = [];
 
-	/**
+    /**
      * Load the specified translations group for the given locale and eventuallay the given namespace.
      *
      * @param  string  $locale
@@ -32,17 +32,17 @@ class TranslationLoader implements LoaderInterface
             throw new Exception("The class ".$model." should implement the interface ".Translatable::class);
         }
 
-    	if (is_null($namespace) || $namespace == '*' || isset($this->hints[$namespace])) {
-    		$keyFormat = $group.'.%';
+        if (is_null($namespace) || $namespace == '*' || isset($this->hints[$namespace])) {
+            $keyFormat = $group.'.%';
         } else {
-	        return [];
-    	}
+            return [];
+        }
 
-    	return $model::getTranslations($locale, $keyFormat);
+        return $model::getTranslations($locale, $keyFormat);
     }
 
     public function addNamespace($namespace, $hint)
     {
-    	$this->hints[$namespace] = $hint;
+        $this->hints[$namespace] = $hint;
     }
 }
