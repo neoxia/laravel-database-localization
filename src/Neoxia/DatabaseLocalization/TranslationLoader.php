@@ -45,4 +45,9 @@ class TranslationLoader implements LoaderInterface
     {
         $this->hints[$namespace] = $hint;
     }
+
+    public function namespaces()
+    {
+        return $this->hints;
+    }
 }
