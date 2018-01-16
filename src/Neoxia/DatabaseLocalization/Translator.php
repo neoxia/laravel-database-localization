@@ -20,6 +20,8 @@ class Translator extends BaseTranslator
      */
     protected function getLine($namespace, $group, $locale, $item, array $replace)
     {
+        $this->load($namespace, $group, $locale);
+
         $line = Arr::get($this->loaded[$namespace][$locale][$group], $group.'.'.$item);
 
         if (is_string($line)) {
@@ -37,15 +39,13 @@ class Translator extends BaseTranslator
      */
     public function load($namespace, $group, $locale)
     {
-        if ($this->isLoaded($namespace, $group, $locale)) {
-            return;
+        if (! $this->isLoaded($namespace, $group, $locale)) {
+            // The loader is responsible for returning the array of language lines for the
+            // given namespace, group, and locale. We'll set the lines in this array of
+            // lines that have already been loaded so that we can easily access them.
+            $lines = $this->loader->load($locale, $group, $namespace);
+            $this->loaded[$namespace][$locale][$group] = $lines;
         }
-
-        // The loader is responsible for returning the array of language lines for the
-        // given namespace, group, and locale. We'll set the lines in this array of
-        // lines that have already been loaded so that we can easily access them.
-        $lines = $this->loader->load($locale, $group, $namespace);
-        $this->loaded[$namespace][$locale][$group] = $lines;
     }
 
     /**
