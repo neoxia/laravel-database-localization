@@ -2,12 +2,12 @@
 
 namespace Neoxia\DatabaseLocalization;
 
-use Illuminate\Translation\LoaderInterface;
+use Illuminate\Contracts\Translation\Loader;
 use Neoxia\DatabaseLocalization\Translatable;
 
 use Exception;
 
-class TranslationLoader implements LoaderInterface
+class TranslationLoader implements Loader
 {
     /**
      * All of the namespace hints.
