@@ -17,6 +17,13 @@ class TranslationLoader implements Loader
     protected $hints = [];
 
     /**
+     * All of the registered paths to JSON translation files.
+     *
+     * @var string
+     */
+    protected $jsonPaths = [];
+
+    /**
      * Load the specified translations group for the given locale and eventuallay the given namespace.
      *
      * @param  string  $locale
@@ -49,5 +56,10 @@ class TranslationLoader implements Loader
     public function namespaces()
     {
         return $this->hints;
+    }
+
+    public function addJsonPath($path)
+    {
+        $this->jsonPaths[] = $path;
     }
 }
