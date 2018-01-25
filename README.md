@@ -6,12 +6,10 @@ This package allows the storage of Laravel translations in a database instead of
 
 ## Installation
 
-In order to install this package, add `neoxia/laravel-database-localization` in `composer.json`.
+Require this package with composer using the following command:
 
-```JS
-"require": {
-    "neoxia/laravel-database-localization": "1.0.*"
-},
+```
+composer require neoxia/laravel-database-localization
 ```
 
 Go to `config/app.php`, remove the original service provider

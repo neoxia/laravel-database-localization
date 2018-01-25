@@ -4,8 +4,8 @@
     "description": "Use a database source instead of files for localization in Laravel",
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
-        "illuminate/translation": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*"
+        "illuminate/support": "5.5.*",
+        "illuminate/translation": "5.5.*"
     },
     "autoload": {
          "psr-4": {
